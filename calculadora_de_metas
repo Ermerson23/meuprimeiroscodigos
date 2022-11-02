@@ -1,0 +1,31 @@
+vendedor_1 = None
+vendedor_2 = None
+vendedor_3 = None
+total_vendas = None
+
+meta_do_mes = float(input('Digite a meta do mes da empresa: R$'))
+vendedor_1 = float(input('Digite quanto o vendedor 1 vendeu:R$'))
+vendedor_2 = float(input('Digite quanto o vendedor 2 vendeu:R$'))
+vendedor_3 = float(input('Digite quanto o vendedor 3 vendeu:R$'))
+meta_vendedor_1 = float(input('Digite qual a meta do vendedor 1: R$'))
+meta_vendedor_2 = float(input('Digite qual a meta do vendedor 2: R$'))
+meta_vendedor_3 = float(input('Digite a meta do vendedor 3: R$'))
+total_vendas = (vendedor_1 + vendedor_2 + vendedor_3)
+print('As vendas totais foram', 'R$', (total_vendas))
+
+if total_vendas >= (meta_do_mes):
+    print('Parabens!!! Meta Batida.')
+else:
+    print('Sinto muito,Nao batemos a meta este mes.')
+print('------------------------------------')
+print('      RELATORIO!    ')
+print('------------------------------------')
+porcentagem_1 = float(vendedor_1*100) / (meta_vendedor_1)
+porcentagem_2 = float(vendedor_2*100) / (meta_vendedor_2)
+porcentagem_3 = float(vendedor_3*100) / (meta_vendedor_3)
+porcentagem_total = float(vendedor_1+vendedor_2+vendedor_3)*100/(meta_do_mes)
+print('------------------------------------')
+print('O vendedor 1 bateu', porcentagem_1, '%', 'da sua meta')
+print('O vendedor 2 bateu', porcentagem_2, '%', 'da sua meta')
+print('O vendedor 3 bateu', porcentagem_3, '%', 'da sua meta')
+print('Batemos', porcentagem_total, '%', 'da meta do mes')
